@@ -6,6 +6,6 @@ use App\Domain\Entity\Product;
 
 interface ProductRepository
 {
-    public function save(Product $product): void;
+    public function saveIfUnique(Product $product): void;
 
 }

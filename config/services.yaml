@@ -27,5 +27,4 @@ services:
     # please note that last definitions always *replace* previous ones
     App\Infrastructure\Parser\FeedParser:
         arguments:
-            - '%env(string:FEED)%'
             - '@App\Application\ProductCreator'

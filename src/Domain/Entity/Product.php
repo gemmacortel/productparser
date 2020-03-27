@@ -27,21 +27,15 @@ class Product
     private $link;
 
     /**
-     * @ORM\Column(type="datetime")
-     */
-    private $pubDate;
-
-    /**
      * Product constructor.
      * @param $title
      * @param $link
      * @param $pubDate
      */
-    public function __construct($title, $link, $pubDate)
+    public function __construct($title, $link)
     {
         $this->title = $title;
         $this->link = $link;
-        $this->pubDate = $pubDate;
     }
 
     public function getId(): ?int
@@ -69,18 +63,6 @@ class Product
     public function setLink(string $link): self
     {
         $this->link = $link;
-
-        return $this;
-    }
-
-    public function getPubDate(): ?\DateTime
-    {
-        return $this->pubDate;
-    }
-
-    public function setPubDate(\DateTimeInterface $pubDate): self
-    {
-        $this->pubDate = $pubDate;
 
         return $this;
     }
